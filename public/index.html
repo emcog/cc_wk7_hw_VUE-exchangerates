@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./public/main.css"/>
+    <script src="./js/bundle.js"></script>
+    <title>money money money</title>
+</head>
+<body>
+    <h1>Commerce is our faith</h1>
+    <div id="app">
+        <div>
+            <H2>Money exchange</H2>
+            <label for="exchange">How much do you have?</label><br>
+            <input type="number" id="exchange" v-model="amountIn"></input><br>
+            
+            <label for="currency">In which currency?</label></br>
+            <select id="currency">
+                <option v-for="(rate, currency) in currencies"  v-bind:exchangeRate=rate>{{ currency }}</option>
+            </select>
+        </div>
+       
+        
+    </div>
+</body>
+</html>
+
+<option v-for=“(rate, currency) in ratesTable.rates” v-bind:value=“rate”>{{ currency }}</option>
