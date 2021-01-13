@@ -13,17 +13,18 @@
         <div>
             <H2>Money exchange</H2>
             <label for="exchange">How much do you have?</label><br>
-            <input type="number" id="exchange" v-model="amountIn"></input><br>
+            <input type="number" id="exchange" v-model.number="amountIn"></input><br>
             
             <label for="currency">In which currency?</label></br>
-            <select id="currency">
-                <option v-for="(rate, currency) in currencies"  v-bind:exchangeRate=rate>{{ currency }}</option>
+            <select id="currency" v-model="exchangeRate">
+                <option disabled value ="this is a val">Choose your currency</option>
+                <option v-for="(rate, currency) in currencies" v-bind:value=rate>{{ currency }}</option>
             </select>
         </div>
+        <span>You get back € {{calculateExchange}}</span>
        
-        
     </div>
 </body>
 </html>
 
-<option v-for=“(rate, currency) in ratesTable.rates” v-bind:value=“rate”>{{ currency }}</option>
+<!-- sdfsd -->

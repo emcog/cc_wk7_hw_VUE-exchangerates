@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         computed: {
             calculateExchange: function(){
-                return this.amountOut = this.amountIn * this.value;
+                return this.amountIn / this.exchangeRate;
             }
         },
         mounted(){
